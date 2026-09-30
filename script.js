@@ -5,7 +5,7 @@ function mostrarAcao(acao) {
 
     mensagem.textContent =
         "✓ " + acao +
-        " — opção selecionada na simulação.";
+        " — opção selecionada saldo devendo Pix não liberado.";
 
     mensagem.style.display = "block";
 
