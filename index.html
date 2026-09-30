@@ -1,204 +1,217 @@
-ui<!DOCTYPE html>
-<html lang="pt-br">
+<!DOCTYPE html>
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
     <title>Interface Credicard</title>
-    <style>
-        :root {
-            --blue-main: #003399;
-            --blue-bg: #f4f2f0;
-            --white: #ffffff;
-            --text-light: #f4f2f0;
-            --progress-gray: #e0e0e0;
-        }
 
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            background-color: var(--blue-bg);
-            margin: 0;
-            padding: 10px;
-            display: flex;
-            justify-content: center;
-        }
-
-        .container {
-            width: 100%;
-            max-width: 400px;
-            background-color: var(--blue-bg);
-        }
-
-        /* Header User Info */
-        .header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 20px 10px;
-        }
-
-        .user-info {
-            display: flex;
-            align-items: center;
-        }
-
-        .avatar {
-            width: 45px;
-            height: 45px;
-            background-color: #e8f0fe;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--blue-main);
-            font-weight: bold;
-            margin-right: 12px;
-        }
-
-        .user-details div {
-            font-size: 16px;
-            font-weight: 500;
-            color: var(--blue-main);
-        }
-
-        .user-details span {
-            font-size: 12px;
-            color: #666;
-        }
-
-        .exit-btn {
-            text-align: center;
-            color: var(--blue-main);
-            font-size: 12px;
-            text-decoration: none;
-        }
-
-        /* Card Principal */
-        .card {
-            background-color: var(--blue-main);
-            border-radius: 8px;
-            padding: 20px;
-            color: white;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-        }
-
-        .card-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
-            margin-bottom: 20px;
-        }
-
-        .brand-name { font-size: 16px; font-weight: 400; }
-        .ocultar { font-size: 12px; border: 1px solid #ffffff50; padding: 2px 8px; border-radius: 4px; }
-
-        .card-details { display: flex; align-items: flex-start; margin-bottom: 30px; }
-        .mc-logo { width: 35px; margin-right: 15px; margin-top: 5px; }
-        .info-text { font-size: 14px; line-height: 1.4; opacity: 0.9; }
-
-        .divider { border-top: 1px solid #ffffff30; margin: 15px 0; }
-
-        .vencimento { font-size: 14px; margin-bottom: 5px; opacity: 0.9; }
-        .valor-fatura { font-size: 24px; font-weight: 500; margin-bottom: 25px; }
-        .valor-fatura span { font-size: 14px; font-weight: 300; }
-
-        /* Barra de Limite */
-        .limit-labels { display: flex; justify-content: space-between; font-size: 12px; margin-bottom: 5px; opacity: 0.8; }
-        .progress-bar { width: 100%; height: 4px; background: #ffffff40; border-radius: 2px; position: relative; margin-bottom: 8px; }
-        .progress-fill { width: 60%; height: 100%; background: white; border-radius: 2px; }
-        .limit-values { display: flex; justify-content: space-between; font-size: 14px; font-weight: 500; }
-
-        /* Tabs Inferiores */
-        .card-tabs {
-            display: flex;
-            margin-top: 25px;
-            border-top: 1px solid #ffffff30;
-            padding-top: 15px;
-        }
-        .tab { font-weight: bold; font-size: 14px; margin-right: 40px; cursor: pointer; }
-        .tab-secondary { font-weight: 400; opacity: 0.8; }
-
-        /* Menu de Pontos e Atendimento */
-        .menu-item {
-            background: white;
-            margin-top: 15px;
-            padding: 20px;
-            border-radius: 8px;
-            display: flex;
-            align-items: center;
-            color: var(--blue-main);
-            font-weight: 500;
-        }
-        .icon-box { margin-right: 15px; font-size: 20px; }
-
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-<div class="container">
-    <div class="header">
+<main class="container">
+
+    <!-- CABEÇALHO -->
+    <header class="header">
+
         <div class="user-info">
-            <div class="avatar">LF</div>
+
+            <div class="avatar">
+                LF
+            </div>
+
             <div class="user-details">
-                <div>Liliam fidelis.   </div>
+                <strong>Liliam fidelis.</strong>
                 <span>CPF: ***.***.209-60</span>
             </div>
-        </div>
-        <div class="exit-btn">
-            <div style="font-size: 20px;">➔</div>
-            sair
-        </div>
-    </div>
 
-    <div class="card">
-        <div class="card-header">
-            <span class="brand-name">Credicard Itau</span>
-            <span class="ocultar">ocultar ^</span>
         </div>
+
+        <button class="exit-btn">
+            <span>➜</span>
+            Sair
+        </button>
+
+    </header>
+
+
+    <!-- CARTÃO -->
+    <section class="card">
+
+        <div class="card-header">
+            <span class="brand-name">
+                Credicard Itau
+            </span>
+
+            <button class="hide-btn">
+                ocultar
+                <span>⌃</span>
+            </button>
+        </div>
+
 
         <div class="card-details">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Mastercard-logo.svg/1280px-Mastercard-logo.svg.png" class="mc-logo" alt="Mastercard">
+
+            <div class="mastercard">
+                <span></span>
+                <span></span>
+            </div>
+
             <div class="info-text">
                 final 8292<br>
                 melhor data de compra 06<br>
                 fatura aberta
             </div>
+
         </div>
 
-        <div class="divider"></div>
-
-        <div class="vencimento"> 5 agosto.</div>
-        <div class="valor-fatura">R$ 19.963,00 <span>valor parcial</span></div>
 
         <div class="divider"></div>
 
+
+        <div class="vencimento">
+            29 setembro 
+        </div>
+
+        <div class="valor-fatura">
+            R$ 19.963,00
+            <small>valor parcial</small>
+        </div>
+
+
+        <div class="divider"></div>
+
+
+        <!-- LIMITE -->
         <div class="limit-labels">
             <span>limite utilizado</span>
             <span>disponível</span>
         </div>
+
         <div class="progress-bar">
             <div class="progress-fill"></div>
         </div>
+
         <div class="limit-values">
             <span>R$ 45,00 Devendo</span>
             <span>R$ 19.963,00</span>
         </div>
 
+
         <div class="card-tabs">
-            <div class="tab">fatura</div>
-            <div class="tab tab-secondary">transferência</div>
+            <button class="tab active">
+                fatura
+            </button>
+
+            <button class="tab">
+                transferência
+            </button>
         </div>
+
+    </section>
+
+
+    <!-- AÇÕES PRINCIPAIS -->
+    <section class="action-buttons">
+
+        <button
+            class="action-btn"
+            onclick="mostrarAcao('PIX Parcelado')">
+
+            <span class="action-icon">↗</span>
+
+            <span class="action-content">
+                <strong>PIX Parcelado</strong>
+                <small>Faça seu PIX em parcelas</small>
+            </span>
+
+            <span class="arrow">›</span>
+
+        </button>
+
+
+        <button
+            class="action-btn"
+            onclick="mostrarAcao('Ver extrato')">
+
+            <span class="action-icon">▤</span>
+
+            <span class="action-content">
+                <strong>Ver extrato</strong>
+                <small>Confira suas movimentações</small>
+            </span>
+
+            <span class="arrow">›</span>
+
+        </button>
+
+
+        <button
+            class="action-btn"
+            onclick="mostrarAcao('Consultar limite')">
+
+            <span class="action-icon">▣</span>
+
+            <span class="action-content">
+                <strong>Consultar limite</strong>
+                <small>Veja seu limite disponível</small>
+            </span>
+
+            <span class="arrow">›</span>
+
+        </button>
+
+    </section>
+
+
+    <!-- MENSAGEM -->
+    <div
+        id="actionMessage"
+        class="action-message">
     </div>
 
-    <div class="menu-item">
-        <div class="icon-box">:::+</div>
-        pontos
-    </div>
 
-    <div class="menu-item">
-        <div class="icon-box">ⓘ</div>
-        atendimento digital
-    </div>
-</div>
+    <!-- OUTROS MENUS -->
+    <button class="menu-item">
+
+        <span class="menu-icon">
+            ✦
+        </span>
+
+        <span>
+            pontos
+        </span>
+
+        <span class="menu-arrow">
+            ›
+        </span>
+
+    </button>
+
+
+    <button class="menu-item">
+
+        <span class="menu-icon">
+            ⓘ
+        </span>
+
+        <span>
+            atendimento digital
+        </span>
+
+        <span class="menu-arrow">
+            ›
+        </span>
+
+    </button>
+
+</main>
+
+
+<script src="script.js"></script>
 
 </body>
 </html>
