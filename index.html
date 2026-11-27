@@ -1,215 +1,111 @@
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0">
-
-    <title>Interface Credicard</title>
-
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BluePay - Painel Demo</title>
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
+  <div class="demo-banner">DEMONSTRAÇÃO — DADOS FICTÍCIOS</div>
 
-<main class="container">
-
-    <!-- CABEÇALHO -->
-    <header class="header">
-
-        <div class="user-info">
-
-            <div class="avatar">
-                LA
-            </div>
-
-            <div class="user-details">
-                luccas dantas.s. a.</strong>
-                <span>CPF: ***.***.789-80</span>
-            </div>
-
-        </div>
-
-        <button class="exit-btn">
-            <span>➜</span>
-            Sair
-        </button>
-
+  <main class="app">
+    <header class="profile">
+      <div class="avatar">BL</div>
+      <div class="user">
+        <strong>Lucas Almeida</strong>
+        <small>Conta demonstrativa</small>
+      </div>
+      <button class="logout" onclick="alert('Área demonstrativa')">➜</button>
     </header>
 
+    <section class="credit-card">
+      <div class="card-header">
+        <h2>BlueCard</h2>
+        <button id="toggleBalance">ocultar⌃</button>
+      </div>
 
-    <!-- CARTÃO -->
-    <section class="card">
+      <div class="card-info">
+        <div class="fake-logo">
+          <span></span><span></span>
+        </div>
+        <p>cartão final 8572</p>
+        <p>melhor data de compra 15</p>
+        <p>fatura aberta</p>
+      </div>
 
-        <div class="card-header">
-            <span class="brand-name">
-                Credicard Itau
-            </span>
+      <div class="invoice">
+        <small>24 Novembro</small>
+        <div class="amount-line">
+          <strong class="money">R$ 1.950,00</strong>
+          <span>valor parcial</span>
+        </div>
+      </div>
 
-            <button class="hide-btn">
-                ocultar
-                <span>⌃</span>
-            </button>
+      <div class="limit">
+        <div class="limit-label">
+          <span>limite utilizado</span>
+          <span>disponível</span>
         </div>
 
-
-        <div class="card-details">
-
-            <div class="mastercard">
-                <span></span>
-                <span></span>
-            </div>
-
-            <div class="info-text">
-                final 8572<br>
-                melhor data de compra 15<br>
-                fatura aberta
-            </div>
-
-        </div>
-
-
-        <div class="divider"></div>
-
-
-        <div class="vencimento">
-           27 Novembro
-        </div>
-
-        <div class="valor-fatura">
-            R$ 19.950,00
-            <small>valor parcial</small>
-        </div>
-
-
-        <div class="divider"></div>
-
-
-        <!-- LIMITE -->
-        <div class="limit-labels">
-            <span>limite utilizado</span>
-            <span>disponível</span>
-        </div>
-
-        <div class="progress-bar">
-            <div class="progress-fill"></div>
+        <div class="bar">
+          <div class="progress"></div>
         </div>
 
         <div class="limit-values">
-            <span>R$ 88,90 Devendo</span>
-            <span>R$ 19.950,00</span>
+          <strong class="used">R$ 25,90 Devendo</strong>
+          <strong class="available">R$ 19.950,00</strong>
         </div>
+      </div>
 
-
-        <div class="card-tabs">
-            <button class="tab active">
-                fatura
-            </button>
-
-            <button class="tab">
-                transferência
-            </button>
-        </div>
-
+      <div class="card-footer">
+        <span>fatura</span>
+        <span>transferência</span>
+      </div>
     </section>
 
+    <section class="actions">
+      <button class="action" onclick="showMessage('Área de demonstração')">
+        <div class="action-icon">↗</div>
+        <div class="action-text">
+          <strong>PIX Parcelado</strong>
+          <small>Faça seu PIX em parcelas</small>
+        </div>
+        <span class="arrow">›</span>
+      </button>
 
-    <!-- AÇÕES PRINCIPAIS -->
-    <section class="action-buttons">
+      <button class="action" onclick="showMessage('Extrato fictício')">
+        <div class="action-icon">▤</div>
+        <div class="action-text">
+          <strong>Ver extrato</strong>
+          <small>Última movimentação via pix 9:24</small>
+        </div>
+        <span class="arrow">›</span>
+      </button>
 
-        <button
-            class="action-btn"
-            onclick="mostrarAcao('PIX Parcelado')">
+      <button class="action" onclick="showMessage('Limite de demonstração')">
+        <div class="action-icon">▣</div>
+        <div class="action-text">
+          <strong>Consultar limite</strong>
+          <small>Veja seu limite disponível</small>
+        </div>
+        <span class="arrow">›</span>
+      </button>
 
-            <span class="action-icon">↗</span>
-
-            <span class="action-content">
-                <strong>PIX Parcelado</strong>
-                <small>Faça seu PIX em parcelas</small>
-            </span>
-
-            <span class="arrow">›      </button>
-
-
-        <button
-            class="action-btn"
-            onclick="mostrarAcao('Ver extrato')">
-
-            <span class="action-icon">▤</span>
-
-            <span class="action-content">
-                <strong>Ver extrato</strong>
-                <small>Última compra via pix as 9:24 </small>
-            </span>
-
-            <span class="arrow">›</span>
-
-        </button>
-
-
-        <button
-            class="action-btn"
-            onclick="mostrarAcao('Consultar limite')">
-
-            <span class="action-icon">▣</span>
-
-            <span class="action-content">
-                <strong>Consultar limite</strong>
-                <small>Veja seu limite disponível</small>
-            </span>
-
-            <span class="arrow">›</span>
-
-        </button>
-
+      <button class="action points" onclick="showMessage('Pontos fictícios')">
+        <div class="star">✦</div>
+        <div class="action-text">
+          <strong>pontos</strong>
+        </div>
+        <span class="arrow">›</span>
+      </button>
     </section>
 
+    <div id="toast"></div>
+    <footer>BluePay • Interface fictícia para demonstração</footer>
+  </main>
 
-    <!-- MENSAGEM -->
-    <div
-        id="actionMessage"
-        class="action-message">
-    </div>
-
-
-    <!-- OUTROS MENUS -->
-    <button class="menu-item">
-
-        <span class="menu-icon">
-            ✦
-        </span>
-
-        <span>
-            pontos
-        </span>
-
-        <span class="menu-arrow">
-            ›
-        </span>
-
-    </button>
-
-
-    <button class="menu-item">
-
-        <span class="menu-icon">
-            ⓘ
-        </span>
-
-        <span>
-            atendimento digital
-        </span>
-
-        <span class="menu-arrow">
-            ›
-        </span>
-
-    </button>
-
-</main>
-
-
-<script src="script.js"></script>
-
+  <script src="script.js"></script>
 </body>
 </html>
