@@ -1,1 +1,337 @@
-*{box-sizing:border-box}body{margin:0;background:#08080a;color:#fff;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,sans-serif}.hero{min-height:100vh;position:relative;background-image:linear-gradient(180deg,rgba(33,23,60,.18),rgba(35,15,49,.50) 48%,rgba(13,8,22,.92)),url('https://aliencloud.store/gta6/lucia-jason.webp');background-position:center 35%;background-size:cover;background-repeat:no-repeat;overflow:hidden;padding:20px 18px 34px}.topbar{display:flex;justify-content:space-between;align-items:center;max-width:900px;margin:auto}.brand-mark{font-size:28px;color:#eee}.topbar nav{display:flex;align-items:center;gap:10px}.topbar a,.outline{border:1px solid rgba(255,255,255,.25);padding:12px 15px;border-radius:30px;color:#fff;text-decoration:none;background:rgba(255,255,255,.05);font-size:14px}.live span{display:inline-block;background:#ef364b;width:9px;height:9px;border-radius:50%;margin-right:7px}.iconbtn{border:0;background:transparent;color:white;font-size:24px;padding:6px}.hero-content{position:absolute;left:5%;right:5%;bottom:13%;max-width:780px}.gta-mark{width:64px;height:68px;margin:0 0 18px;display:flex;align-items:center;justify-content:center;transform:skew(-4deg);filter:drop-shadow(0 4px 2px #0008)}.gta-mark img{display:block;width:100%;height:100%;object-fit:contain}.subtitle{font-size:13px;font-weight:700;letter-spacing:.2px}.hero h1{font-size:clamp(32px,7vw,52px);margin:8px 0 20px;letter-spacing:-1.5px}.cta{width:100%;max-width:650px;background:#ff9fc7;color:#130c15;border:0;border-radius:40px;padding:21px 18px;font-size:18px;font-weight:750;box-shadow:0 5px 22px #0004}.slider-controls{display:flex;align-items:center;gap:22px;margin:80px 20px 0;color:#bbb}.pause{font-weight:bold}.track{height:6px;width:50px;background:#777;border-radius:5px;position:relative}.track i{position:absolute;width:12px;height:6px;background:#fff;border-radius:6px}.social{position:absolute;right:26px;bottom:28px;background:#111;border-radius:50%;width:50px;height:50px;display:grid;place-items:center;font-size:25px}.demo-tag{position:absolute;top:92px;left:18px;font-size:10px;opacity:.7;letter-spacing:1px}.plans-sheet,.checkout{position:fixed;z-index:5;bottom:0;left:0;right:0;max-height:88vh;overflow:auto;background:#080808;border-radius:28px 28px 0 0;padding:28px 22px 22px;box-shadow:0 -10px 50px #000a}.hidden{display:none}.sheet-head{display:flex;justify-content:space-between;align-items:center}.mini-brand{display:flex;align-items:center;gap:10px;font-weight:700;letter-spacing:1px;color:#ccc}.mini-brand small{border:1px solid #555;border-radius:22px;padding:5px 11px;font-size:11px}.close{background:transparent;color:#ddd;border:0;font-size:30px}.plans-sheet h2,.checkout h2{font-size:29px;margin:34px 0 18px}.intro,.checkout-intro{font-size:18px;line-height:1.5;color:#aaa;margin-bottom:26px}.plan-list{display:grid;gap:14px}.plan{display:flex;justify-content:space-between;align-items:center;background:#151515;color:white;border:2px solid #333;border-radius:17px;padding:22px 18px;font-size:18px;text-align:left}.plan strong{font-size:20px}.plan.selected{border-color:#eee;background:#252525}.smallnote{text-align:center;color:#777;margin:28px 0}.account-btn{width:100%;background:#fff;border:0;border-radius:20px;padding:23px;font-weight:700;font-size:17px;color:#111}.demo-note{font-size:11px;text-align:center;color:#777;margin:12px 0 0}.checkout{background:#171717}.checkout-head{display:flex;align-items:center;gap:20px;color:#aaa}.checkout-head button{background:none;border:0;color:#fff;font-size:16px}.checkout-head span{font-weight:700;letter-spacing:1px}.checkout-head small{border:1px solid #666;padding:3px 8px;border-radius:12px;margin-left:7px}.checkout h2{font-size:26px;line-height:1.2}.payment-card{background:#050505;padding:22px 18px;text-align:center;border-radius:4px}.payment-card h3{font-size:18px;line-height:1.5;margin:6px 0 16px}.lead{font-size:17px;color:#bbb}.amount{color:#ccc;font-size:14px;margin:18px 0}.amount span{margin:0 5px}.payment-card hr{border:0;border-top:1px solid #666;margin:20px 0}.instructions{color:#aaa;line-height:1.5}textarea{width:100%;height:110px;background:#111;border:1px solid #333;border-radius:10px;color:#888;padding:10px;font-size:12px;resize:none;word-break:break-all}.copy-btn{width:100%;background:#bbb;border:0;border-radius:30px;padding:15px;margin-top:12px;font-weight:bold}.qr-label{font-weight:700}.qr-placeholder{width:180px;height:180px;margin:15px auto;background:repeating-linear-gradient(45deg,#eee 0 8px,#222 8px 16px);display:grid;place-items:center;color:#111;font-size:25px;font-weight:900;outline:10px solid white}.toast{position:fixed;z-index:10;bottom:18px;left:50%;transform:translateX(-50%);background:#222;color:#eee;padding:12px 18px;border-radius:22px;opacity:0;pointer-events:none;transition:opacity .2s;font-size:14px}.toast.show{opacity:1}@media(min-width:700px){.plans-sheet,.checkout{left:50%;right:auto;width:min(540px,100%);transform:translateX(-50%);border:1px solid #333}.hero-content{left:7%;bottom:11%}.hero{background-position:center 35%}}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #f1f2f6;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #173b73;
+}
+
+.demo-banner {
+  background: #ffdb70;
+  color: #4c3500;
+  text-align: center;
+  font-size: 11px;
+  font-weight: bold;
+  letter-spacing: 1.5px;
+  padding: 10px;
+}
+
+.app {
+  width: 100%;
+  max-width: 520px;
+  margin: auto;
+  padding: 20px 16px 30px;
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin: 12px 6px 26px;
+}
+
+.avatar {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: #e0eaff;
+  display: grid;
+  place-items: center;
+  font-weight: bold;
+  font-size: 18px;
+  color: #1551ad;
+}
+
+.user {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.user strong {
+  color: #303d51;
+  font-size: 17px;
+  font-weight: 500;
+}
+
+.user small {
+  color: #8b929f;
+  font-size: 12px;
+}
+
+.logout {
+  border: 0;
+  background: transparent;
+  color: #1451a6;
+  font-size: 25px;
+  cursor: pointer;
+}
+
+.credit-card {
+  background: linear-gradient(145deg, #1450b8, #063481 75%);
+  color: white;
+  border-radius: 25px;
+  padding: 25px 22px;
+  box-shadow: 0 10px 25px rgba(0, 45, 120, .16);
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card-header h2 {
+  font-size: 22px;
+  margin: 0;
+}
+
+.card-header button {
+  border: 1px solid rgba(255,255,255,.2);
+  border-radius: 10px;
+  padding: 8px 13px;
+  background: rgba(255,255,255,.08);
+  color: white;
+}
+
+.card-info {
+  margin: 38px 0 42px 70px;
+  line-height: 1.9;
+  font-size: 16px;
+}
+
+.card-info p {
+  margin: 0;
+  color: #e2ecff;
+}
+
+.fake-logo {
+  display: flex;
+  margin-bottom: 8px;
+}
+
+.fake-logo span {
+  width: 29px;
+  height: 29px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.fake-logo span:first-child {
+  background: #ff424e;
+}
+
+.fake-logo span:last-child {
+  background: #ffca31;
+  margin-left: -8px;
+}
+
+.invoice,
+.limit {
+  border-top: 1px solid rgba(255,255,255,.2);
+  padding: 26px 0;
+}
+
+.invoice small {
+  font-size: 16px;
+  color: #c1d8fa;
+}
+
+.amount-line {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 9px;
+  margin-top: 9px;
+}
+
+.money {
+  font-size: 30px;
+}
+
+.amount-line span {
+  font-size: 14px;
+  color: #bed4f4;
+}
+
+.limit-label {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  color: #c0d8fb;
+  margin-bottom: 14px;
+}
+
+.bar {
+  width: 100%;
+  height: 8px;
+  border-radius: 10px;
+  background: rgba(255,255,255,.22);
+  overflow: hidden;
+}
+
+.progress {
+  width: 58%;
+  height: 100%;
+  border-radius: 10px;
+  background: #fff;
+}
+
+.limit-values {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  margin-top: 12px;
+  font-size: 15px;
+}
+
+.limit-values strong {
+  white-space: nowrap;
+}
+
+.card-footer {
+  border-top: 1px solid rgba(255,255,255,.2);
+  padding-top: 25px;
+  display: flex;
+  gap: 38px;
+  font-size: 14px;
+  color: #c1d8fa;
+}
+
+.card-footer span:first-child {
+  color: white;
+  font-weight: bold;
+}
+
+.actions {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 24px;
+}
+
+.action {
+  width: 100%;
+  min-height: 106px;
+  background: white;
+  border: 0;
+  border-radius: 22px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  gap: 17px;
+  text-align: left;
+  box-shadow: 0 5px 20px rgba(20,50,90,.05);
+  cursor: pointer;
+  color: #184783;
+}
+
+.action:active {
+  transform: scale(.99);
+}
+
+.action-icon {
+  flex-shrink: 0;
+  width: 60px;
+  height: 60px;
+  background: #1150b5;
+  border-radius: 17px;
+  display: grid;
+  place-items: center;
+  color: white;
+  font-size: 24px;
+  box-shadow: 0 5px 12px rgba(12, 66, 160, .15);
+}
+
+.action-text {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.action-text strong {
+  font-size: 17px;
+  color: #174783;
+}
+
+.action-text small {
+  color: #8a94a3;
+  font-size: 14px;
+}
+
+.arrow {
+  color: #8e9eb4;
+  font-size: 27px;
+}
+
+.points {
+  min-height: 92px;
+}
+
+.star {
+  width: 60px;
+  color: #1552a8;
+  font-size: 28px;
+  text-align: center;
+}
+
+footer {
+  text-align: center;
+  padding: 25px 5px 10px;
+  color: #9ba4b1;
+  font-size: 11px;
+}
+
+#toast {
+  position: fixed;
+  left: 50%;
+  bottom: 30px;
+  transform: translateX(-50%);
+  background: #153f7e;
+  color: white;
+  padding: 14px 20px;
+  border-radius: 14px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .3s;
+  font-size: 14px;
+  z-index: 10;
+}
+
+#toast.show {
+  opacity: 1;
+}
+
+.hidden-value {
+  filter: blur(7px);
+}
+
+@media (max-width: 380px) {
+  .credit-card {
+    padding: 20px 16px;
+  }
+
+  .card-info {
+    margin-left: 55px;
+    font-size: 14px;
+  }
+
+  .money {
+    font-size: 26px;
+  }
+
+  .limit-values {
+    font-size: 12px;
+  }
+
+  .action {
+    padding: 15px;
+    gap: 12px;
+  }
+}
